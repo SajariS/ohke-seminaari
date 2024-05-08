@@ -71,3 +71,5 @@ Luotu image löytyy, joko docker images komennolla listasta tai graafisetsta lii
 # NPM(Vite) projektin kontitus
 
 ### Valmistelu
+
+https://heidloff.net/article/deploying-nginx-on-openshift/
