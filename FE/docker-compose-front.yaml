@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  jpeli-fe:
+    image: jpelifronttesti:latest
+    container_name: jpeli_front
+    env_file: .env
+    ports:
+    - 5173:5173
+    stdin_open: true
+    tty: true

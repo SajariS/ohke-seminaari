@@ -1,0 +1,437 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  background-color: rgba(127, 84, 253, 1);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: inherit;
+  padding: 5px 10px;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+.container {
+  justify-content: center;
+}
+
+body {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin-right: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgba(40, 10, 130, 255);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.body {
+  padding: 10px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+div.logo {
+  height: 50px;
+  text-align: center;
+}
+
+.logo {
+  color: #ff9051;
+  text-shadow: -2px -2px 0 white,
+    3px -2px 0 white,
+    -2px 2px 0 white,
+    3px 2px 0 white;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.manual {
+  background-color: #fff;
+  color: #ff9051;
+  margin-right: 0px;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgba(209, 209, 209, 255);
+  color: #333;
+  transition: border-color 0.3s;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  padding: 10px;
+}
+
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgba(209, 209, 209, 255);
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.card {
+  padding: 2em;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.navigation li {
+  display: inline;
+}
+
+.active {
+  background-color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Puhelin optimaatio */
+
+@media (max-width: 440px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    padding: 0.4em 0.8em;
+    font-size: 0.8em;
+  }
+
+  .body {
+    padding: 5px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    border-radius: 40px;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .navigation ul {
+    margin-right: 10px;
+  }
+
+  .navigation li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .card {
+    padding: 1em;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    padding: 0.3em 0.6em;
+    font-size: 0.7em;
+  }
+
+  .body {
+    padding: 3px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 12px;
+    padding: 6px;
+    margin-bottom: 6px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .navigation ul {
+    margin-right: 5px;
+  }
+
+  .navigation li {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .card {
+    padding: 0.8em;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.x-button {
+  margin-left: 20px;
+}
+
+/* Gameplay-tyylit*/
+
+.content-wrapper {
+  padding: 20px;
+}
+
+.partner-info {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.partner-name {
+  color: #ffffff;
+}
+
+.card-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.card-item {
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+.dialog-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1b1b1b;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+
+}
+
+.card-desc {
+  font-size: 18px;
+  color: #181818;
+
+}
+
+.dialog-content {
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.dialog-button-yes {
+  margin-right: 10px;
+  padding: 8px 16px;
+  background-color: #22dd95;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+.dialog-button-no {
+  margin-right: 10px;
+  padding: 8px 16px;
+  background-color: #be372d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+.wait-message {
+  font-style: italic;
+  color: #ffffff;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.test-button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #0099ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start-button {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Loading-komponentin tyylit*/
+
+.loading-component {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.loader {
+  border: 6px solid #fff;
+  border-radius: 50%;
+  border-top: 6px solid transparent;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
