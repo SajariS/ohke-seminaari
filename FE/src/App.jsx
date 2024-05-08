@@ -28,7 +28,7 @@ function App() {
       <Router>
         <Container>
           <Routes>
-            <Route path="Juomapeli-front/" element={<FrontPage />} />
+            <Route path="/" element={<FrontPage />} />
             <Route path="/gamelobby" element={<GameLobby />} />
             <Route path="/joingame" element={<Joingame />} />
             <Route path="/cards" element={<Cards />} />

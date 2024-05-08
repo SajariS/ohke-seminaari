@@ -10,12 +10,14 @@ COPY . .
 
 RUN npm run build
 
-FROM nginxinc/nginx-unprivileged
+FROM nginx:alpine
 
-#COPY --from=builder /app/nginx /etc/nginx/
+COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+WORKDIR /code
 
-EXPOSE ${PORT}
+COPY --from=builder /app/dist .
+
+EXPOSE 8000
 
 CMD ["nginx", "-g", "daemon off;"]
