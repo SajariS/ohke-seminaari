@@ -243,9 +243,7 @@ Imagen EXPOSE kohdassa oleva portti, Vite:n tapauksessa 8000, spring bootin 8080
 Jos on tarvittavaa asettaa ympäristömuuttujia, se löytyy "Advanced Deployment option" alta.
 <img src="./images/EnvVar.png">
 
-Koska konttiin halutaan päästä ulkopuolelta käsiksi, valitaan "Create a route" kohta. "Advanced Routing options" alta löytyy asetuksia, joilla voidaan muokata esim. hostnamea.
-
-"Advanced Routing options" alta halutaan kuitenkin valita "Secure Route". Spring Bootin tapauksessa, on myös tarpeellista valita "Insecure traffic" alta "Allow". Viten tapauksessa, sen voi myös lisätä, jos konttiin ei saa yhteyttä selaimella.
+Koska konttiin halutaan päästä ulkopuolelta käsiksi, valitaan "Create a route" kohta. "Advanced Routing options" alta löytyy asetuksia, jonka alta halutaan valita "Secure Route". Spring Bootin tapauksessa, on myös tarpeellista valita "Insecure traffic" alta "Allow". Viten tapauksessa, sen voi myös lisätä, jos konttiin ei saa yhteyttä selaimella.
 
 <img src="./images/Routing.png">
 
@@ -263,6 +261,7 @@ Seminaarityön aikana alkuperäinen Rahti, jota oli tarkoitus käyttää, vaihtu
 Rahti palvelussa kontin pystyi konfiguroimaan käyttämään suoraan dockerhubista vedettyä imagea, eli kun kontin käynnisti uudestaan, se automaattisesti hakee :latest tägillä tuoreimman version DockerHubista, kun taas Rahti 2 vaatii ImageStreamin väliin, joka haittaa merkittävästi käytettävän imagen päivitystä tuorempaan versioon.
 
 Täyttä varmuutta ei ole siitä mikä laukaisee uuden version haun DockerHubista, mutta se on kuitenkin mahdollista.
+10.5.2024, FE kontin päivityksen yhteydessä huomattu ainoa tapa saada päivitys konttiin, oli luoda oma uusi ImageStream ja käyttää sitä kontissa, joka on aika iso ero verrattuna Rahdin tapaan käynnistää kontti uudelleen ja hakea päivitys sitä kautta.
 
 Hyötynä DockerHubin käytössä on ylimääräisten palveluiden ja kirjautumisien karsiminen, ideaalisesti kontti voidaan päivittää pelkästään sillä että DockerHubiin työnnetään uusi versio ja esim. webHookilla laukaistaan konttien redeploy, joka imee uuden imagen ja suorittaa ajon sillä. 
 
@@ -279,3 +278,9 @@ Imagejen käyttö mahdollistaa myös image registryjen käytön, johon voidaan s
 - Rahti 2 tuoma kankeus DockerHubin kanssa
 - Vaatii jonkin näköistä osaamista Dockerista
 - Mahdolliset käyttöoikeus ongelmat, esim. nginx kanssa
+
+# Linkit ja lähteet
+
+- Esimerkkinä käytetty projekti, muokattu esimerkkiä varten: https://github.com/SajariS/JuomaPeli
+- Esimerkin julkaistu demo(Rahdin takia ei toimi hirveän pitkään): https://ohke-fe-ohkeseminaari.2.rahtiapp.fi/
+- Niklas Heidloff, Deploying Nginx on OpenShift: https://heidloff.net/article/deploying-nginx-on-openshift/
