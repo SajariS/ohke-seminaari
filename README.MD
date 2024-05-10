@@ -1,6 +1,6 @@
 # Esittely
 
-Esityksessä käsitellään miten kokonainen Fullstack projekti voidaan kontittaa ja miten sitä voidaan hyväksi käyttää ja julkaista Rahti 2 palveluun valmiiksi luoduilla imageilla.
+Esityksessä käsitellään miten kokonainen Fullstack projekti voidaan kontittaa ja miten se voidaan julkaista Rahti 2 palveluun valmiiksi luoduilla imageilla.
 
 Seminaarin esimerkki vaatii projektien omien vaatimusten lisäksi vähintään Dockerin, GitHub/DockerHub tilin, sekä pääsyn Rahti 2 palveluun.
 
